@@ -9,9 +9,8 @@ import { z } from "zod";
 import { random } from './utils';
 import cors from 'cors';
 
-
+require('dotenv').config();
 const port = 3000;
-const JWT_SECRET = 'your-secret-key';
 
 
 const app = express();
@@ -126,7 +125,7 @@ app.post("/api/v1/signin", async (req: Request, res: Response): Promise<void> =>
           email: user.email,
           username: user.username,
         },
-        JWT_SECRET,
+        process.env.JWT_SECRET as string,
 
       );
 

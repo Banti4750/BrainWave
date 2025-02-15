@@ -1,10 +1,10 @@
 import { NextFunction, Request, Response } from "express";
 import jwt, { JwtPayload } from "jsonwebtoken";
-const JWT_SECRET = 'your-secret-key';
+require('dotenv').config();
 
 export const Middleware = (req: Request, res: Response, next: NextFunction) => {
     const header = req.headers["authorization"];
-    const decoded = jwt.verify(header as string, JWT_SECRET)
+    const decoded = jwt.verify(header as string, process.env.JWT_SECRET as string)
     if (decoded) {
         if (typeof decoded === "string") {
             res.status(403).json({
