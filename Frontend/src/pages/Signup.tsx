@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
 const UserSignup: React.FC = () => {
-  const navigate =useNavigate();
+  const navigate = useNavigate();
   const [username, setUsername] = useState<string>('');
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
@@ -16,7 +16,7 @@ const UserSignup: React.FC = () => {
     setError(null);
 
     try {
-      const response = await axios.post('http://localhost:3000/api/v1/signup', {
+      const response = await axios.post('https://brainwave-jibt.onrender.com/api/v1/signup', {
         username,
         email,
         password,
@@ -51,7 +51,7 @@ const UserSignup: React.FC = () => {
               value={username}
               onChange={(e) => setUsername(e.target.value)}
               required
-             className="block w-full rounded-lg bg-gray-800 px-4 py-2 text-white shadow-sm ring-1 ring-inset ring-gray-700 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-500 transform transition-all duration-200 ease-in-out hover:ring-2 hover:ring-indigo-500/50 sm:text-sm"/>
+              className="block w-full rounded-lg bg-gray-800 px-4 py-2 text-white shadow-sm ring-1 ring-inset ring-gray-700 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-500 transform transition-all duration-200 ease-in-out hover:ring-2 hover:ring-indigo-500/50 sm:text-sm" />
           </div>
 
           {/* Email Field */}
@@ -65,7 +65,7 @@ const UserSignup: React.FC = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              className="block w-full rounded-lg bg-gray-800 px-4 py-2 text-white shadow-sm ring-1 ring-inset ring-gray-700 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-500 transform transition-all duration-200 ease-in-out hover:ring-2 hover:ring-indigo-500/50 sm:text-sm"/>
+              className="block w-full rounded-lg bg-gray-800 px-4 py-2 text-white shadow-sm ring-1 ring-inset ring-gray-700 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-500 transform transition-all duration-200 ease-in-out hover:ring-2 hover:ring-indigo-500/50 sm:text-sm" />
 
           </div>
 
@@ -80,7 +80,7 @@ const UserSignup: React.FC = () => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
-              className="block w-full rounded-lg bg-gray-800 px-4 py-2 text-white shadow-sm ring-1 ring-inset ring-gray-700 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-500 transform transition-all duration-200 ease-in-out hover:ring-2 hover:ring-indigo-500/50 sm:text-sm"/>
+              className="block w-full rounded-lg bg-gray-800 px-4 py-2 text-white shadow-sm ring-1 ring-inset ring-gray-700 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-500 transform transition-all duration-200 ease-in-out hover:ring-2 hover:ring-indigo-500/50 sm:text-sm" />
           </div>
 
           {/* Submit Button */}

@@ -5,7 +5,7 @@ export function useYoutubeContext() {
   const [contents, setContents] = useState([]);
 
   function fetchagaintoBackend() {
-    axios.get('http://localhost:3000/api/v1/content', {
+    axios.get('https://brainwave-jibt.onrender.com/api/v1/content', {
       headers: {
         "Authorization": localStorage.getItem('token')
       }

@@ -17,7 +17,7 @@ const Signin: React.FC = () => {
     const signup = async (event: FormEvent<HTMLButtonElement>) => {
         event.preventDefault();
         try {
-            const response = await axios.post('http://localhost:3000/api/v1/signin', {
+            const response = await axios.post('https://brainwave-jibt.onrender.com/api/v1/signin', {
 
                 email: email,
                 password: password

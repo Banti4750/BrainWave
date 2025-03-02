@@ -85,7 +85,7 @@ const Addbrain = ({ open, onclose }: { open: boolean; onclose: () => void }) => 
     setLoading(true);
     try {
       const response = await axios.post(
-        'http://localhost:3000/api/v1/content',
+        'https://brainwave-jibt.onrender.com/api/v1/content',
         { title, link, type },
         {
           headers: {
