@@ -8,7 +8,7 @@ import Sidebar from "../Components/Sidebar"
 // import { useInstagramContext } from "../hooks/useInstagarmContext"
 import { useNavigate } from "react-router-dom"
 import { useContentNotion } from "../hooks/useContentNotion"
-import SearchComponent from "../Components/Search"
+// import SearchComponent from "../Components/Search"
 
 const NotionDashboard = () => {
     const [openbox, setopenBox] = useState(false);
@@ -31,7 +31,7 @@ const NotionDashboard = () => {
                     <div className="max-w-7xl mx-auto">
                         <div className="flex items-center justify-between">
                             <h1 className="text-2xl font-semibold text-gray-900">Notion Dashboard</h1>
-                            <SearchComponent />
+                            {/* <SearchComponent /> */}
                             <div className="flex space-x-4">
                                 <MyButton
                                     varient="primary"

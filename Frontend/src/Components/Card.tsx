@@ -13,7 +13,7 @@ const Card = ({ contentId, title, link, type, }: CardProps) => {
     const deleteContent = async () => {
         if (!window.confirm("Are you sure you want to delete this content?")) return;
         try {
-            await axios.delete(`http://localhost:3000/api/v1/delete/${contentId}`);
+            await axios.delete(`https://brainwave-jibt.onrender.com/api/v1/delete/${contentId}`);
             alert("Content deleted successfully!");
             window.location.reload(); // Refresh the page
             // Trigger re-fetch or state update in parent component if needed

@@ -7,7 +7,7 @@ import Shareicon from "../Icons/Shareicon"
 import Sidebar from "../Components/Sidebar"
 import { useTweetContext } from "../hooks/useTweetContext"
 import { useNavigate } from "react-router-dom"
-import SearchComponent from "../Components/Search"
+// import SearchComponent from "../Components/Search"
 
 const TweetDashboard = () => {
 	const [openbox, setopenBox] = useState(false);
@@ -29,7 +29,7 @@ const TweetDashboard = () => {
 					<div className="max-w-7xl mx-auto">
 						<div className="flex items-center justify-between">
 							<h1 className="text-2xl font-semibold text-gray-900">Twitter Dashboard</h1>
-							<SearchComponent />
+							{/* <SearchComponent /> */}
 							<div className="flex space-x-4">
 								<MyButton
 									varient="primary"
