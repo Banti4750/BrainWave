@@ -25,11 +25,11 @@ const Addbrain = ({ open, onclose }: { open: boolean; onclose: () => void }) => 
     return match && match[2].length === 11 ? match[2] : null;
   };
 
-  const getInstagramId = (url: string) => {
-    const regex = /instagram\.com\/p\/([^/?]+)/;
-    const match = url.match(regex);
-    return match ? match[1] : null;
-  };
+  // const getInstagramId = (url: string) => {
+  //   const regex = /instagram\.com\/p\/([^/?]+)/;
+  //   const match = url.match(regex);
+  //   return match ? match[1] : null;
+  // };
 
   // Function to validate Twitter URL
   const isValidTwitterUrl = (url: string) => {
@@ -41,9 +41,9 @@ const Addbrain = ({ open, onclose }: { open: boolean; onclose: () => void }) => 
     return url.includes('instagram.com');
   };
 
-  const handlePreviewError = () => {
-    setPreviewError('Unable to load preview. Please verify the URL is correct and try again.');
-  };
+  // const handlePreviewError = () => {
+  //   setPreviewError('Unable to load preview. Please verify the URL is correct and try again.');
+  // };
 
   const validateForm = () => {
     if (!title.trim()) {
@@ -84,7 +84,7 @@ const Addbrain = ({ open, onclose }: { open: boolean; onclose: () => void }) => 
 
     setLoading(true);
     try {
-      const response = await axios.post(
+      await axios.post(
         'https://brainwave-jibt.onrender.com/api/v1/content',
         { title, link, type },
         {
@@ -108,7 +108,7 @@ const Addbrain = ({ open, onclose }: { open: boolean; onclose: () => void }) => 
     }
   };
 
-  const PreviewErrorFallback = ({ message }: { message: string }) => (
+  ({ message }: { message: string }) => (
     <div className="flex flex-col items-center justify-center p-6 bg-gray-50 rounded-lg border border-gray-200">
       <svg className="w-12 h-12 text-gray-400 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
