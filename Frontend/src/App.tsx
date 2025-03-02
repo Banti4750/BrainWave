@@ -6,8 +6,8 @@ import TweetDashboard from "./pages/TweetDashboard"
 import YoutubeDashboard from "./pages/YoutubeDashboard"
 import InstagramDashboard from "./pages/InstagramDashboard"
 import LandingPage from "./pages/LandingPage"
-import NotionDashboard from "./pages/Notiondashboard"
-import { SharedBrainView } from "./Components/ShareBrainButton"
+// import { SharedBrainView } from "./Components/ShareBrainButton"
+import NotionDashboard from "./pages/NotionDashboard"
 
 
 
@@ -28,7 +28,7 @@ const App = () => {
           <Route path="/youtube" element={<YoutubeDashboard />} />
           <Route path="/instagram" element={<InstagramDashboard />} />
           <Route path="/notion" element={<NotionDashboard />} />
-          <Route path="/share/:hash" element={<SharedBrainView />} />
+          {/* <Route path="/share/:hash" element={<SharedBrainView />} /> */}
           <Route path="/dashboard" element={<Dashboard />} />
 
         </Routes>

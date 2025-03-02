@@ -7,7 +7,7 @@ import Shareicon from "../Icons/Shareicon"
 import Sidebar from "../Components/Sidebar"
 import { useInstagramContext } from "../hooks/useInstagarmContext"
 import { useNavigate } from "react-router-dom"
-import SearchComponent from "../Components/Search"
+// import SearchComponent from "../Components/Search"
 
 const InstagramDashboard = () => {
     const [openbox, setopenBox] = useState(false);
@@ -30,7 +30,7 @@ const InstagramDashboard = () => {
                     <div className="max-w-7xl mx-auto">
                         <div className="flex items-center justify-between">
                             <h1 className="text-2xl font-semibold text-gray-900">Instagram Dashboard</h1>
-                            <SearchComponent />
+
                             <div className="flex space-x-4">
                                 <MyButton
                                     varient="primary"

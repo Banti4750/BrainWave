@@ -7,7 +7,6 @@ import Shareicon from "../Icons/Shareicon"
 import Sidebar from "../Components/Sidebar"
 import { useYoutubeContext } from "../hooks/useYoutubeContext"
 import { useNavigate } from "react-router-dom"
-import SearchComponent from "../Components/Search"
 
 const YoutubeDashboard = () => {
   const [openbox, setopenBox] = useState(false);
@@ -30,7 +29,7 @@ const YoutubeDashboard = () => {
           <div className="max-w-7xl mx-auto">
             <div className="flex items-center justify-between">
               <h1 className="text-2xl font-semibold text-gray-900">Youtube Dashboard</h1>
-              <SearchComponent />
+              {/* <SearchComponent /> */}
               <div className="flex space-x-4">
                 <MyButton
                   varient="primary"

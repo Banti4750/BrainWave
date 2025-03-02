@@ -1,18 +1,17 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Addbrain from "../Components/Addbrain";
 import Card from "../Components/Card";
 import MyButton from "../Components/MyButton";
 import Addicon from "../Icons/Addicon";
-import Shareicon from "../Icons/Shareicon";
 import Sidebar from "../Components/Sidebar";
 import { useContent } from "../hooks/useContents";
 import { useNavigate } from "react-router-dom";
-import SearchComponent from "../Components/Search";
-import { ShareBrainButton } from "../Components/ShareBrainButton";
+// import SearchComponent from "../Components/Search";
+// import { ShareBrainButton } from "../Components/ShareBrainButton";
 
 const Dashboard = () => {
     const [openbox, setopenBox] = useState(false);
-    const [filteredContent, setFilteredContent] = useState<any[]>([]);
+    // const [filteredContent, setFilteredContent] = useState<any[]>([]);
     const content = useContent(); // Fetch all content
     const navigate = useNavigate();
 
@@ -20,11 +19,7 @@ const Dashboard = () => {
     //@ts-ignore
     const userIdFilter = content.length > 0 ? content[0].userId._id : null;
 
-    useEffect(() => {
-        console.log("Filtered Content:", filteredContent);
-        console.log("Full Content:", content);
-        console.log("User ID Filter:", userIdFilter);
-    }, [filteredContent, content]);
+
 
     function logout() {
         localStorage.removeItem("token");
@@ -57,7 +52,7 @@ const Dashboard = () => {
                                     starticon={<Addicon />}
                                     onClick={() => setopenBox(true)}
                                 />
-                                <ShareBrainButton />
+                                {/* <ShareBrainButton /> */}
                                 <MyButton varient="third" text="Logout" onClick={logout} />
                             </div>
                         </div>

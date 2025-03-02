@@ -3,11 +3,7 @@ import React, { useState, FormEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
-interface FocusState {
 
-    email: boolean;
-    password: boolean;
-}
 
 const Signin: React.FC = () => {
     const navigate = useNavigate();

@@ -14,9 +14,7 @@ const Addbrain = ({ open, onclose }: { open: boolean; onclose: () => void }) => 
   const [title, setTitle] = useState('');
   const [link, setLink] = useState('');
   const [type, setType] = useState(ContentType.Youtube);
-  const [isPreviewVisible, setIsPreviewVisible] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [previewError, setPreviewError] = useState<string | null>(null);
 
   // Function to extract YouTube video ID
   const getYoutubeVideoId = (url: string) => {
@@ -97,8 +95,6 @@ const Addbrain = ({ open, onclose }: { open: boolean; onclose: () => void }) => 
       setTitle('');
       setLink('');
       setType(ContentType.Youtube);
-      setIsPreviewVisible(false);
-      setPreviewError(null);
       onclose();
       window.location.reload(); // Refresh the page
     } catch (error: any) {
@@ -144,7 +140,6 @@ const Addbrain = ({ open, onclose }: { open: boolean; onclose: () => void }) => 
                   key={contentType}
                   onClick={() => {
                     setType(contentType);
-                    setPreviewError(null);
                   }}
                   varient={type === contentType ? 'primary' : 'secondary'}
                   text={contentType.charAt(0).toUpperCase() + contentType.slice(1)}
@@ -161,7 +156,6 @@ const Addbrain = ({ open, onclose }: { open: boolean; onclose: () => void }) => 
               value={link}
               onChange={(e) => {
                 setLink(e.target.value);
-                setPreviewError(null);
               }}
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               placeholder={`Enter ${type} link...`}
